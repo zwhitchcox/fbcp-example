@@ -4,7 +4,7 @@ volumes:
 
 services:
   browser:
-    image: balenablocks/browser
+    build: ./browser
     privileged: true # required for UDEV to find plugged in peripherals such as a USB mouse
     network_mode: host
     ports:
@@ -16,10 +16,10 @@ services:
     volumes:
       - 'pulse:/run/pulse'
   fbcp:
-    image: ./fbcp
+    image: balenablocks/fbcp
     privileged: true
     environment:
-      FBCP_DISPLAY: waveshare32b
+      FBCP_DISPLAY: dtoverlay
   audio:
     image: balenablocks/audio
     privileged: true
