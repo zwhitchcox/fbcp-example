@@ -16,7 +16,7 @@ services:
     volumes:
       - 'pulse:/run/pulse'
   fbcp:
-    image: ./fbcp
+    build: ./fbcp
     privileged: true
     environment:
       FBCP_DISPLAY: waveshare32b
