@@ -1,0 +1,3 @@
+[submodule "fbcp"]
+	path = fbcp
+	url = https://github.com/balenablocks/fbcp
